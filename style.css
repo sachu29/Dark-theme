@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+:root {
+    --background: #f2eee3;
+    --check: #000;
+    --ball: #f2eee3;
+}
+
+.dark {
+    --background: #000;
+    --check: #f2eee3;
+    --ball: #000;
+    color: #f2eee3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zeyada', cursive;
+}
+
+.dark-mode {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: var(--background);
+    transform: .5s;
+    font-size: 2em;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    width: 50px;
+    height: 26px;
+    background: var(--check);
+    border-radius: 50px;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.ball{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    background: var(--ball);
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+.Button-content {
+    margin-top: 10px;
+}
